@@ -44,11 +44,16 @@ def timMakeSketch(x, y):
     def turnLeft():
         tim.left(5)
 
+    def clearScreen():
+        tim.clear()
+        tim.penup()
+        tim.home()
+
     screen.onkey(key="w", fun=moveForward)
     screen.onkey(key="s", fun=moveBackward)
     screen.onkey(key="a", fun=turnLeft)
     screen.onkey(key="d", fun=turnRight)
-    screen.onkey(key="c", fun=tim.clear)
+    screen.onkey(key="c", fun=clearScreen)
 
     screen.exitonclick()
 
